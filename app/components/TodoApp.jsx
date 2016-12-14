@@ -6,6 +6,8 @@ var Search = require('Search');
 var TodoApp = React.createClass({
   getInitialState: function () {
     return {
+      showCompleted: false,
+      searchText: '',
       todos: [
         {
           id: 1,
@@ -30,6 +32,12 @@ var TodoApp = React.createClass({
     //   todos.push(newT);
     // });
   },
+  handleSearch: function (showCompleted, searchText) {
+    this.setState({
+      showCompleted: showCompleted,
+      searchText: searchText.toLowerCase()
+    });
+  },
   render: function () {
     var {todos} = this.state;
 
@@ -38,7 +46,7 @@ var TodoApp = React.createClass({
         <div className="row">
           <div className="column small-centered medium-6 large-4">
             <h1 className="page-title">Todo App</h1>
-            <Search/>
+            <Search onSearch={this.handleSearch}/>
             <TodoList todos={todos}/>
             <AddTodo onAddTodo={this.handleAddTodo}/>
           </div>
