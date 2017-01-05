@@ -12,7 +12,6 @@ export var toggleShowCompleted = () => {
   }
 };
 
-
 export var addTodo = (text) => {
   return {
     type: 'ADD_TODO',
