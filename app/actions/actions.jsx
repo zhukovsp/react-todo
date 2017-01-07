@@ -63,7 +63,7 @@ export var startAddTodos = () => {
           ...todos[todoId]
         });
       });
-      dispatch(addTodos(parsedTodos));  
+      dispatch(addTodos(parsedTodos));
     });
   };
 };
@@ -89,5 +89,3 @@ export var startToggleTodo = (id, completed) => {
     });
   };
 };
-
-// toggleTodo(id) TOGGLE_TODO

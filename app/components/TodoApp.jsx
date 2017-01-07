@@ -1,5 +1,5 @@
 var React = require('react');
-var uuid = require('uuid');
+var uuid = require('node-uuid');
 var moment = require('moment');
 
 import TodoList from 'TodoList';
@@ -11,6 +11,7 @@ var TodoApp = React.createClass({
     return (
       <div>
         <h1 className="page-title">Todo App</h1>
+        
         <div className="row">
           <div className="column small-centered medium-6 large-5 small-11">
             <div className="container">
@@ -26,23 +27,3 @@ var TodoApp = React.createClass({
 });
 
 module.exports = TodoApp;
-
-// [
-//   {
-//     id: uuid(),
-//     text: 'Walk the dog',
-//     completed: false
-//   }, {
-//     id: uuid(),
-//     text: 'Clean the yard',
-//     completed: true
-//   }, {
-//     id: uuid(),
-//     text: 'Leave mail on porch',
-//     completed: true
-//   }, {
-//     id: uuid(),
-//     text: 'Play video games',
-//     completed: false
-//   }
-// ]

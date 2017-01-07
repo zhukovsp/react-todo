@@ -1,5 +1,4 @@
-
-var uuid = require('uuid');
+var uuid = require('node-uuid');
 var moment = require('moment');
 
 export var searchTextReducer = (state = '', action)=> {
@@ -11,7 +10,6 @@ export var searchTextReducer = (state = '', action)=> {
   };
 };
 
-// showCompletedReducer, default false, TOGGLE_SHOW_COMPLETED
 export var showCompletedReducer = (state = false, action) => {
   switch (action.type) {
     case 'TOGGLE_SHOW_COMPLETED':
@@ -28,7 +26,6 @@ export var todosReducer = (state = [], action) => {
         ...state,
         action.todo
       ];
-      //add case for TOGGLE_TODO completed to opposite value & updaetdCompletedAt
       case 'UPDATE_TODO':
         return state.map((todo) => {
           if (todo.id === action.id) {
