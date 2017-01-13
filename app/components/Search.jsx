@@ -2,8 +2,8 @@ var React = require('react');
 var {connect} = require('react-redux');
 var actions = require('actions');
 
-export var Search = React.createClass({
-  render: function () {
+export class Search extends React.Component {
+  render () {
     var {dispatch, showCompleted, searchText} = this.props;
 
     return (
@@ -25,7 +25,7 @@ export var Search = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default connect(
   (state) => {
